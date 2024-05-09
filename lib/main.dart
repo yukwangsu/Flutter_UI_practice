@@ -14,14 +14,20 @@ class App extends StatelessWidget {
       home: Scaffold(
           backgroundColor: const Color(0xFF181818),
           body: Padding(
+              //전체 화면의 왼쪽, 오른쪽에 Padding을 추가한다.
               padding: const EdgeInsets.symmetric(horizontal: 20),
+              //Column에 모든걸 넣는다.
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                //children에 Column에 들어갈 요소들이 들어간다.
                 children: [
+                  //위에 빈 공간을 만든다.
                   const SizedBox(
                     height: 60,
                   ),
+                  //이름과 문구를 담고있는 Row.
                   Row(
+                    //이름과 문구를 오른쪽으로 붙인다.
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Column(
@@ -60,7 +66,7 @@ class App extends StatelessWidget {
                     height: 5,
                   ),
                   const Text(
-                    '\$5 194 482',
+                    '\$5,194,482',
                     style: TextStyle(
                       fontSize: 48,
                       fontWeight: FontWeight.w600,
@@ -89,7 +95,9 @@ class App extends StatelessWidget {
                     height: 40,
                   ),
                   Row(
+                    //Row이므로 crossAxisAlignment는 수직방향(아래의 경우 바닥에 붙는다.)
                     crossAxisAlignment: CrossAxisAlignment.end,
+                    //Row이므로 mainAxisAlignment는 수평방향(아래의 경우 가운데 공간이 생긴다.)
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
